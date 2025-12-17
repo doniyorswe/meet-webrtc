@@ -1,7 +1,13 @@
 import { cn } from "@/lib/utils";
 import { CalendarClock, LogIn, Video } from "lucide-react";
+import { useNavigate } from "react-router";
 
 export default function HomePage() {
+    const navigate = useNavigate()
+    function handleCreateMeet() {
+        navigate('/j/57072249338074')
+    }
+
     return (
         <div
             className={cn(
@@ -11,10 +17,10 @@ export default function HomePage() {
             <div>
                 <h2 className="text-2xl font-semibold mb-8">UzMeet — havola orqali video uchrashuvlar</h2>
                 <div className="grid grid-cols-3 gap-4 min-w-[360px]">
-                    <div className={cn("h-[300px] col-span-2", buttonClassname)}>
+                    <button className={cn("h-[300px] col-span-2", buttonClassname)} onClick={handleCreateMeet}>
                         <Video size={80} />
                         <p>Uchrashuv boshlash</p>
-                    </div>
+                    </button>
                     <div className="grid grid-rows-2 gap-4">
                         <div className={cn(buttonClassname)}>
                             <LogIn size={32} />
