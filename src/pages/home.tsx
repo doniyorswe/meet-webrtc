@@ -1,5 +1,6 @@
+import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
-import { CalendarClock, LogIn, Video } from "lucide-react";
+import { ArrowRight, CalendarClock, Video } from "lucide-react";
 import { useNavigate } from "react-router";
 
 export default function HomePage() {
@@ -11,24 +12,29 @@ export default function HomePage() {
     return (
         <div
             className={cn(
-                "bg-[url('https://yastatic.net/s3/psf/general-themes/darkflow-1536-a7e53ebfd64a82a126773db166d30c1b.jpg')]",
-                "h-screen flex items-center justify-center"
+                "bg-[url('http://test.xamidovcoder.uz/media/crm/background_images/background_uWHEnUk.jpg')]",
+                "h-screen flex items-center bg-center bg-cover justify-center"
             )}>
-            <div>
-                <h2 className="text-2xl font-semibold mb-8">UzMeet — havola orqali video uchrashuvlar</h2>
-                <div className="grid grid-cols-3 gap-4 min-w-[360px]">
-                    <button className={cn("h-[300px] col-span-2", buttonClassname)} onClick={handleCreateMeet}>
-                        <Video size={80} />
-                        <p>Uchrashuv boshlash</p>
-                    </button>
-                    <div className="grid grid-rows-2 gap-4">
-                        <div className={cn(buttonClassname)}>
-                            <LogIn size={32} />
-                            <p>Qo'shilish</p>
+            <div className="backdrop-blur-md p-10 w-full h-full flex justify-center items-center bg-black/10">
+                <div className="max-w-sm">
+                    <h2 className="text-2xl font-semibold mb-8">Meet — havola orqali video uchrashuvlar</h2>
+                    <div className="flex flex-col gap-2 min-w-[360px]">
+                        <div className="grid grid-cols-2 gap-2">
+                            <button className={cn(buttonClassname, 'bg-primary')} onClick={handleCreateMeet}>
+                                <Video size={20} />
+                                <p>Uchrashuv boshlash</p>
+                            </button>
+                            <div className={cn(buttonClassname)}>
+                                <CalendarClock size={20} />
+                                <p>Rejalashtirish</p>
+                            </div>
                         </div>
-                        <div className={cn(buttonClassname)}>
-                            <CalendarClock size={32} />
-                            <p>Rejalashtirish</p>
+                        <div className='relative'>
+                            <Input placeholder="Kod yoki havola kiriting" className="text-sm rounded-xl bg-secondary! shadow-lg" />
+                            <button className={cn(buttonClassname, 'absolute right-1 top-1 py-2 px-3 shadow-none bg-background')}>
+                                <span>Qo'shilish</span>
+                                <ArrowRight size={12} />
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -37,4 +43,4 @@ export default function HomePage() {
     )
 }
 
-const buttonClassname = 'bg-black/20 backdrop-blur-md shadow-lg flex items-center justify-center flex-col gap-2 rounded-3xl cursor-pointer'
+const buttonClassname = 'shadow-lg py-3 px-2 flex items-center justify-center gap-2 text-sm rounded-xl cursor-pointer bg-secondary'
