@@ -9,7 +9,7 @@ export default function RoomMain() {
             <div className="flex-1 flex flex-col">
                 <h2 className="text-center">Room ID: {room}</h2>
 
-                <div className="flex-1 p-5">
+                <div className="flex-1 p-5 flex items-center justify-center">
                     <MainWindow />
                 </div>
             </div>

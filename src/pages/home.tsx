@@ -12,14 +12,14 @@ export default function HomePage() {
     return (
         <div
             className={cn(
-                "bg-[url('http://test.xamidovcoder.uz/media/crm/background_images/background_uWHEnUk.jpg')]",
+                "bg-[url('https://yastatic.net/s3/psf/general-themes/darkflow-1536-a7e53ebfd64a82a126773db166d30c1b.jpg')]",
                 "h-screen flex items-center bg-center bg-cover justify-center"
             )}>
-            <div className="backdrop-blur-md p-10 w-full h-full flex justify-center items-center bg-black/10">
-                <div className="max-w-sm">
+            <div className="p-10 w-full h-full flex justify-center items-center">
+                <div className=" bg-black/20 p-10 rounded-4xl backdrop-blur-lg shadow-md">
                     <h2 className="text-2xl font-semibold mb-8">Meet — havola orqali video uchrashuvlar</h2>
-                    <div className="flex flex-col gap-2 min-w-[360px]">
-                        <div className="grid grid-cols-2 gap-2">
+                    <div className="flex flex-col gap-4">
+                        <div className="grid grid-cols-2 gap-4">
                             <button className={cn(buttonClassname, 'bg-primary')} onClick={handleCreateMeet}>
                                 <Video size={20} />
                                 <p>Uchrashuv boshlash</p>
@@ -43,4 +43,4 @@ export default function HomePage() {
     )
 }
 
-const buttonClassname = 'shadow-lg py-3 px-2 flex items-center justify-center gap-2 text-sm rounded-xl cursor-pointer bg-secondary'
+const buttonClassname = 'shadow-lg py-3 px-1 flex items-center justify-center gap-2 text-sm rounded-xl cursor-pointer bg-secondary'

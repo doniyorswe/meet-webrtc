@@ -7,25 +7,25 @@ export default function RoomActions() {
     return (
         <div className="w-full mx-auto grid grid-cols-3">
             <div className="flex items-center gap-2">
-                <Button size="icon">
+                <Button size="icon" variant="secondary">
                     <Link />
                 </Button>
-                <Button size="icon">
+                <Button size="icon" variant="secondary">
                     <MicOff />
                 </Button>
-                <Button size="icon">
+                <Button size="icon" variant="secondary">
                     <VideoOff />
                 </Button>
             </div>
 
             <div className="flex items-center justify-center gap-2">
-                <Button size="icon">
+                <Button size="icon" variant="secondary">
                     <MonitorUp />
                 </Button>
-                <Button size="icon">
+                <Button size="icon" variant="secondary">
                     <MessagesSquare />
                 </Button>
-                <Button size="icon">
+                <Button size="icon" variant="secondary">
                     <Ellipsis />
                 </Button>
             </div>
